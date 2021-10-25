@@ -3,29 +3,34 @@ function computerPlay (){
     random = Math.floor(Math.random() * array.length);
     return (random, array[random]);
 };
-console.log(computerPlay());
+
 
 function round(playerSelection, computerSelection){
-    if ((playerSelection == 'Rock' && computerSelection == 'Scissors')||
-        (playerSelection == 'Scissors' && computerSelection == 'Paper')||
-        (playerSelection == 'Paper' && computerSelection == 'Rock')){
+ playerSelection = prompt('Enter your choose', '');
+ computerSelection = computerPlay();
+    console.log(playerSelection);
+    console.log(computerSelection);
+    if(
+        (playerSelection == 'Rock' && computerSelection === 'Scissors')||
+        (playerSelection == 'Paper' && computerSelection === 'Rock')||
+        (playerSelection == 'Scissors' && computerSelection === 'Paper')){
         console.log('You win!');
-    }else if((playerSelection == 'Paper' && computerSelection == 'Scissors')||
-             (playerSelection == 'Scissors' && computerSelection == 'Rock')||
-             (playerSelection == 'Rock' && computerSelection == 'Paper')){
-        console.log('You lose!');
+    }else if(
+        (playerSelection == 'Rock' && computerSelection === 'Paper')||
+        (playerSelection == 'Paper' && computerSelection === 'Scissors')||
+        (playerSelection == 'Scissors' && computerSelection === 'Rock')){
+        console.log('You Lose!');
     }else{
-        console.log('Nobody win');
+        console.log('Nobody');
     }
 };
-const playerSelection = prompt('Type your choose', '');
-const computerSelection = computerPlay();
-console.log(round(playerSelection, computerSelection));
+round();
 
 function game(){
-    for (let i=0; i<5; i++){
+    let i = 1;
+    do{
         round();
-        console.log(round());
-    }
-};
-console.log(game())
+        ++i;
+    }while (i < 5)
+}
+game();

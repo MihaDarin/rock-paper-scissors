@@ -6,7 +6,6 @@ const scissors = document.getElementById('scissors');
 scissors.addEventListener('click', round);
 
 
-
 function playerSelection(event){
     const target = event.target;
         if (target.tagName != 'BUTTON') return;
@@ -31,6 +30,7 @@ function round(playerSelection, computerSelection){
         (playerSelection.target.id === 'paper' && computerSelection === 'Rock')||
         (playerSelection.target.id === 'scissors' && computerSelection === 'Paper')){
         console.log('You win!');
+        
         return('You win!');
     }else if(
         (playerSelection.target.id === 'rock' && computerSelection === 'Paper')||
@@ -45,11 +45,11 @@ function round(playerSelection, computerSelection){
 };
 console.log(round());
 
-// function game(){
-//     let i = 1;
-//     do{
-//         round();
-//         ++i;
-//     }while (i < 5)
-// }
-// game();
+function game(){
+    let i = 1;
+    do{
+        round();
+        ++i;
+    }while (i < 5)
+}
+game();

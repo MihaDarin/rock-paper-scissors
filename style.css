@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+.choiseButton{
+    width: 300px;
+    height: 280px;
+}
+#rock{
+    background-image: url("images/rock.png");
+    background-size: 190px 280px;
+    background-repeat: no-repeat;
+    width: 190px;
+}
+#paper{
+    background-image: url("images/paper.png");
+    background-size: 210px 280px;
+    background-repeat: no-repeat;
+    width: 210px;
+}
+#scissors{
+    background-image: url("images/scissors.png");
+    background-size: 210px 280px;
+    background-repeat: no-repeat;
+    width: 210px;
+}

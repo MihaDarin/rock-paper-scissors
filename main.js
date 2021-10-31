@@ -1,9 +1,9 @@
 const rock = document.getElementById('rock');
-rock.addEventListener('click', round);
+rock.addEventListener('click', game);
 const paper = document.getElementById('paper');
-paper.addEventListener('click', round);
+paper.addEventListener('click', game);
 const scissors = document.getElementById('scissors');
-scissors.addEventListener('click', round);
+scissors.addEventListener('click', game);
 let win = document.getElementById('win');
 let lose = document.getElementById('lose');
 let playerScore = 0;
@@ -21,41 +21,34 @@ function computerPlay (){
     return (random, array[random]);
 };
 
-
-function round(playerSelection, computerSelection){
-    let playerWin = 0;
+function game(playerSelection, computerSelection){
     computerSelection = computerPlay();
     console.log(playerSelection.target.id);
-    console.log(computerSelection);
+    console.log(computerSelection);   
+    console.log (playerScore);
+    console.log (computerScore);
     if(
         (playerSelection.target.id === 'rock' && computerSelection === 'Scissors')||
         (playerSelection.target.id === 'paper' && computerSelection === 'Rock')||
         (playerSelection.target.id === 'scissors' && computerSelection === 'Paper')){
         console.log('You win!');
-        playerScore += 1;
         win.innerHTML++;
-        console.log(win);
-        return('You win!');
+        ++playerScore;
     }else if(
         (playerSelection.target.id === 'rock' && computerSelection === 'Paper')||
         (playerSelection.target.id === 'paper' && computerSelection === 'Scissors')||
         (playerSelection.target.id === 'scissors' && computerSelection === 'Rock')){
-        console.log('You Lose!');
-        computerScore++;
+        console.log('You lose!');
         lose.innerHTML++;
-        return('You Lose!');
+        ++computerScore;
     }else{
         console.log('Nobody');
-        return('Nobody');
     }
+    
+    if(playerScore == 5){
+        alert ('you win');
+    }else if(computerScore == 5){
+        alert ('computer win');
+    }
+    
 };
-console.log(round());
-
-function game(){
-    let i = 1;
-    do{
-        round();
-        ++i;
-    }while (i < 5)
-}
-game();

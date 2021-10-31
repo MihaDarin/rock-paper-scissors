@@ -1,49 +1,49 @@
 const rock = document.getElementById('rock');
-rock.addEventListener('click', playerSelection);
+rock.addEventListener('click', round);
 const paper = document.getElementById('paper');
-paper.addEventListener('click', playerSelection);
+paper.addEventListener('click', round);
 const scissors = document.getElementById('scissors');
-scissors.addEventListener('click', playerSelection);
+scissors.addEventListener('click', round);
+
+
 
 function playerSelection(event){
     const target = event.target;
         if (target.tagName != 'BUTTON') return;
-      return target.id
-}
-
-function playerSelection(event){
-    const target = event.target;
-        if (target.tagName != 'BUTTON') return;
-      console.log(target.id)
-}
-console.log(playerSelection())
-// function computerPlay (){
-//     let array = ['Rock', 'Paper', 'Scissors'];
-//     random = Math.floor(Math.random() * array.length);
-//     return (random, array[random]);
-// };
+      return(target.id)
+};
 
 
-// function round(playerSelection, computerSelection){
-//  playerSelection = prompt('Enter your choose', '');
-//  computerSelection = computerPlay();
-//     console.log(playerSelection);
-//     console.log(computerSelection);
-//     if(
-//         (playerSelection == 'Rock' && computerSelection === 'Scissors')||
-//         (playerSelection == 'Paper' && computerSelection === 'Rock')||
-//         (playerSelection == 'Scissors' && computerSelection === 'Paper')){
-//         console.log('You win!');
-//     }else if(
-//         (playerSelection == 'Rock' && computerSelection === 'Paper')||
-//         (playerSelection == 'Paper' && computerSelection === 'Scissors')||
-//         (playerSelection == 'Scissors' && computerSelection === 'Rock')){
-//         console.log('You Lose!');
-//     }else{
-//         console.log('Nobody');
-//     }
-// };
-// round();
+function computerPlay (){
+    let array = ['Rock', 'Paper', 'Scissors'];
+    random = Math.floor(Math.random() * array.length);
+    return (random, array[random]);
+};
+
+
+function round(playerSelection, computerSelection){
+
+    computerSelection = computerPlay();
+    console.log(playerSelection.target.id);
+    console.log(computerSelection);
+    if(
+        (playerSelection.target.id === 'rock' && computerSelection === 'Scissors')||
+        (playerSelection.target.id === 'paper' && computerSelection === 'Rock')||
+        (playerSelection.target.id === 'scissors' && computerSelection === 'Paper')){
+        console.log('You win!');
+        return('You win!');
+    }else if(
+        (playerSelection.target.id === 'rock' && computerSelection === 'Paper')||
+        (playerSelection.target.id === 'paper' && computerSelection === 'Scissors')||
+        (playerSelection.target.id === 'scissors' && computerSelection === 'Rock')){
+        console.log('You Lose!');
+        return('You Lose!');
+    }else{
+        console.log('Nobody');
+        return('Nobody');
+    }
+};
+console.log(round());
 
 // function game(){
 //     let i = 1;

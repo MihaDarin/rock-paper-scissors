@@ -37,6 +37,8 @@ function game(playerSelection, computerSelection){
         ++playerPoint;
         whoWins.innerHTML = "Player wins";
         whoWins.classList.add("win");
+        whoWins.classList.remove("lose");
+        whoWins.classList.remove("tie");
     }else if(
         (playerSelection.target.id === 'rock' && computerSelection === 'Paper')||
         (playerSelection.target.id === 'paper' && computerSelection === 'Scissors')||
@@ -44,10 +46,14 @@ function game(playerSelection, computerSelection){
         console.log('You lose!');
         ++computerPoint;
         whoWins.innerHTML = "Computer wins";
+        whoWins.classList.remove("win");
+        whoWins.classList.remove("tie");
         whoWins.classList.add("lose");
     }else{
         console.log('Tie');
         whoWins.innerHTML = "It's a tie";
+        whoWins.classList.remove("win");
+        whoWins.classList.remove("lose");
         whoWins.classList.add("tie");
     }
 
@@ -55,9 +61,19 @@ function game(playerSelection, computerSelection){
                    <span class="sides">Computer: ${computerPoint}</span>`;
 
     if(playerPoint == 5){
-        alert ('you win');
+        whoWins.innerHTML = "Congratulations! You win!";
+        whoWins.classList.add("win");
+        whoWins.classList.remove("lose");
+        whoWins.classList.remove("tie"); 
+        playerPoint = 0;
+        computerPoint = 0;   
     }else if(computerPoint == 5){
-        alert ('computer win');
+        whoWins.innerHTML = "End Game! You lose!";
+        whoWins.classList.remove("win");
+        whoWins.classList.remove("tie");
+        whoWins.classList.add("lose");
+        playerPoint = 0;
+        computerPoint = 0;
     }
     console.log (playerPoint);
     console.log (computerPoint);

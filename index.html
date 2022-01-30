@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rock-paper-scissors</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="containerUI">
-            <div class="buttons">
-                <button class="choiseButton" id="rock" value="images/rock.png" alt="rock image"></button>
-                <button class="choiseButton" id="paper" value="images/paper.png" alt="paper image"></button>
-                <button class="choiseButton" id="scissors"></button>
-            </div>
-            <p id="whoWins">Choose your move</p>
-            <div id="score">
-                <span id="PlayerScore" class="sides">Player: 0</span>
-                <span id="ComputerScore" class="sides">Computer: 0</span>
-            </div>
+      <div class="containerUI">
+        <div class="buttons">
+          <button
+            class="choiseButton"
+            id="rock"
+            value="images/rock.png"
+            alt="rock image"
+          ></button>
+          <button
+            class="choiseButton"
+            id="paper"
+            value="images/paper.png"
+            alt="paper image"
+          ></button>
+          <button class="choiseButton" id="scissors"></button>
         </div>
+        <p id="whoWins">Choose your move</p>
+        <div id="score">
+          <span id="PlayerScore" class="sides">Player: 0</span>
+          <span id="ComputerScore" class="sides">Computer: 0</span>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

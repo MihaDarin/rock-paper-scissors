@@ -1,94 +1,94 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    background-color: rgba(236, 165, 73, 0.795);
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: rgba(236, 165, 73, 0.795);
 }
-.containerUI{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid black; */
-    border-radius: 10%;
-    background-color: rgba(142, 51, 216, 0.788);
+.containerUI {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  /* border-radius: 10%; */
+  background-color: rgba(142, 51, 216, 0.788);
 }
-.result{
-    display: flex;
-    width: 618px;
-    height: 140px;
-    font-size: 50px;
-    justify-content: space-evenly;
-    border: 1px solid green;
+.result {
+  display: flex;
+  width: 618px;
+  height: 140px;
+  font-size: 50px;
+  justify-content: space-evenly;
+  border: 1px solid green;
 }
-.score{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.choiseButton{
-    width: 300px;
-    height: 280px;
+.choiseButton {
+  width: 300px;
+  height: 280px;
 }
-#rock{
-    background-image: url("images/rock.png");
-    background-size: 190px 280px;
-    background-repeat: no-repeat;
-    width: 190px;
+#rock {
+  background-image: url("images/rock.png");
+  background-size: 190px 280px;
+  background-repeat: no-repeat;
+  width: 190px;
 }
-#paper{
-    background-image: url("images/paper.png");
-    background-size: 210px 280px;
-    background-repeat: no-repeat;
-    width: 210px;
+#paper {
+  background-image: url("images/paper.png");
+  background-size: 210px 280px;
+  background-repeat: no-repeat;
+  width: 210px;
 }
-#scissors{
-    background-image: url("images/scissors.png");
-    background-size: 210px 280px;
-    background-repeat: no-repeat;
-    width: 210px;
+#scissors {
+  background-image: url("images/scissors.png");
+  background-size: 210px 280px;
+  background-repeat: no-repeat;
+  width: 210px;
 }
-#whoWins{
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 20px;
-    padding: 12px 0;
-    transition: 0.2s;
-    width: 57vh;
+#whoWins {
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 12px 0;
+  transition: 0.2s;
+  width: 57vh;
 }
-#score{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 57vh;
+#score {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 57vh;
 }
-#score .sides{
-    display: inline-block;
-    padding: 12px 20px;
-    background: #EEE;
-    border-radius: 20px;
-    text-align: center;
-    width: 20vh;
+#score .sides {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #eee;
+  border-radius: 20px;
+  text-align: center;
+  width: 20vh;
 }
 
-.win{
-    background: rgb(44, 238, 18);
+.win {
+  background: rgb(44, 238, 18);
 }
-.lose{
-    background: #ff4719;
+.lose {
+  background: #ff4719;
 }
-.tie{
-    background: rgb(199, 199, 199);
+.tie {
+  background: rgb(199, 199, 199);
 }
